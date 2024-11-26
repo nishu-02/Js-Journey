@@ -67,6 +67,50 @@ switch(day) {
 // switch(false) // directly go outisde the statement
 // we can put the conditon in the case
 
+//While loop in js
+var i = 0;
+while(i<5){
+    console.log(i);
+    i++;
+}
+
+//Do while loop in js
+var i = 0;
+do{
+    console.log(i);
+    i++;
+}while(i<5);
+
+//For loop in js
+for(var i = 0; i<5; i++){
+    console.log(i);
+}
+
+//Even odd using loop
+var num= 10;
+
+for(var i = 0; i<10; i++){
+    if(num % 2 == 0){
+        console.log("Even");
+    }
+    else {
+        console.log("Odd");
+    }
+}
+
+//Nested Loop
+
+for(var i =1; i<=5; i++){
+    for(var j = 1; j<=i; j++){
+        document.write(j + " ");
+    }
+    document.write("<hr>")
+}
+//Break and Continue Statements
+// break is used when the condition is satisfied to break out of the loop
+// continue is used when the condition is satisfied to skip the current iteration and move to the next iteration
+
+
 // Types of Boxes in JS
 
 // alert("Do not touch that code"); //Message in the popup

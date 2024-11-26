@@ -20,4 +20,14 @@ function sum (x,y){
 }
 sum(10,59);
 
+//Functions with return type
 
+function add(a,b){
+    //statements
+    //return value
+    return (a+b);
+    // alert("Sayonara");
+}
+// console.log(add(4,5));
+
+//Events in javascript..
