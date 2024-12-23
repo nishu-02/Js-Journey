@@ -61,7 +61,84 @@ var human = {
     address : {
         city : "Blackwater",
         country : "USA",
-    }
+    },
 }
 
 console.log(human.address.city); //to print the city of the address object inside the human object.
+
+//Another way to create the object.
+
+var human = new Object();
+
+//way to assign the properties to the object.
+human.name = "John";
+human.age = 38;
+human.occupation = "Outlaw";
+human.address = {
+    city : "Blackwater",
+    country : "USA",
+}
+
+//Array of obejcts
+
+var students = [
+    {name : "John", age : 20}, //0
+    {name : "Arthur", age : 22}, //1
+    {name : "Dutch", age : 25}, //2
+    
+]
+
+console.log(students);
+
+for(var i = 0; i < students.length; i++){
+    console.log(students[i].name + "-" + students[i].age);
+}  
+
+//const Objects
+//const is used to declare the constant variable in the JavaScript. It is used to declare the variable
+
+const humans = {
+    name : "John",
+    age : 38,
+    occupation : "Outlaw",
+}
+//if you try to change the value of the constant variable, it will throw the error.
+humans.name = "Arthur"; //this will throw the error.
+
+console.log(humans);
+
+//To prevent from writing the peoperty every time when printing in the for loop we haveans pecial loop called for( in ) loop. which is speacially used for the objects.
+
+for (var key in humans){
+    console.log(key + " : " + humans[key]);// key for the property and humans[key] for the value of the property.
+    //property is also called as the key so that is why we are using the key.
+}
+
+
+//Map() function
+//Map() function is used to create the new array from the existing array. It is used to create the new array with the new values. It is used to create the new array with the new values.
+
+var arr = [1, 34, 5, 6, 7, 8, 9];
+
+function multiply(value){
+    return value*10;
+}
+
+var resultant = arr.map(multiply);
+console.log(resultant);
+
+var object = [
+    {name : "John", age : 20},
+    {name : "Arthur", age : 22},
+    {name : "Dutch", age : 25},
+
+]
+
+function extract(value){
+    return value.name + " is " + value.age + " years old";
+}
+
+var objResult = object.map(extract); //so it create the array from the existing object.
+console.log(objResult); 
+
+
