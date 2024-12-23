@@ -172,3 +172,25 @@ function greater(element){
 //filter() function --> it will return the array of the elements which satisfies the condition
 console.log(numbers.filter(greater));
 
+//toString() function --> it will return the string of the array
+console.log(numbers.toString());
+
+var num = [1, 2, 3, 4, 5, 6, 7];
+
+//values() function --> it will return the values of the array
+console.log(num.values());
+
+//fill() function --> it will fill the array with the value
+console.log(num.fill(0));
+
+//forEach() function --> it will iterate over the array
+
+var a = ["GTBIT", "GTB4CEC", "MSIT", "MAIT"];
+
+//a.forEach(function(){
+// });
+
+a.forEach(function(value, index){
+    console.log(value);
+})
+
