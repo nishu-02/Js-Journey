@@ -133,4 +133,42 @@ console.log(Array.isArray(numbers));
 var a = 1;
 console.log(Array.isArray(a));
 
+//indexOf() function --> it will the give the index of the element
+
+// indexOf("element", start_index) //start_index is optional -->this means if the element is occuring after this or not.
+console.log(numbers.indexOf(5));
+
+//it return the -1 value if the value is no present in the array
+
+//lastIndexOf() function --> it will the give the index of the element from the last
+// lastIndexOf("element", start_index) -->start_index is optional -->this means if the element is occuring after this or not.   
+console.log(numbers.lastIndexOf(5));
+
+//it return the -1 value if the value is no present in the array
+
+//includes() function --> it will return the true if the element is present in the array otherwise false
+console.log(numbers.includes(5));
+
+//it is case sensitive and it will return the false if the element is not present in the array
+
+//some() function --> it will return the true if any of the element satisfies the condition otherwise false
+console.log(numbers.some((element) => element>5));
+
+//every() function --> it will return the true if all of the element satisfies the condition otherwise false
+console.log(numbers.every((element) => element>5));
+
+//so this some and every wants function as the parameter and define the condition in the function
+
+//find() function --> it will return the first element which satisfies the condition\
+console.log(numbers.find(greater));
+
+//findIndex() function --> it will return the index of the first element which satisfies the condition
+console.log(numbers.findIndex(greater));
+
+function greater(element){
+    return element > 4;
+}
+
+//filter() function --> it will return the array of the elements which satisfies the condition
+console.log(numbers.filter(greater));
 
