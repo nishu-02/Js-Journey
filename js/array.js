@@ -194,3 +194,5 @@ a.forEach(function(value, index){
     console.log(value);
 })
 
+//map() function --> it will return the array of the values which are returned by the function
+
