@@ -20,6 +20,9 @@ var a = now.getFullYear(); //returns 2025
 
 now.setMonth(1);
 var a = now.getMonth(); //returns 1
+
+now.setHours(11);
+
 //similarly like this we can set Hour, seconds, milliseconds by the same method.
 
 console.log(a); 
