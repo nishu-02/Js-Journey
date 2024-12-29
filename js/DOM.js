@@ -72,3 +72,13 @@ element = document.getElementById("header").setAttribute("class", "header-class"
 element = document.getElementById("header").attributes[2].value = "xyz";
 
 element = document.getElementById("header").removeAttribute("name");
+
+//The Query Selector method:-
+
+//1. querySelector() - it targets only the first one
+//2. querySelectorAll() - it targets the all
+
+element = document.querySelector("#header").innerHTML = "<h1> Hola Amigo </h1>";
+element = document.querySelector("#header").getAttribute("class");
+
+element = document.querySelectorAll(".list")[2].innerHTML;
