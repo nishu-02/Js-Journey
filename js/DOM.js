@@ -104,3 +104,8 @@ element = document.querySelector("#header").classList.add("class-name");
 
 //vice-a-versa we can remove the classes the too
 element = document.querySelector("#header").classList.remove("class-name");
+
+
+
+
+
