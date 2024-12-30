@@ -82,3 +82,25 @@ element = document.querySelector("#header").innerHTML = "<h1> Hola Amigo </h1>";
 element = document.querySelector("#header").getAttribute("class");
 
 element = document.querySelectorAll(".list")[2].innerHTML;
+
+// DOM CSS Styling Methods
+element = document.querySelector("#header").style.border;
+element = document.querySelector("#header").style.color; //by this we can retrive the style of the css
+
+element = document.querySelector("#header").style.border = "1px solid black";
+element = document.querySelector("#header").style.color = "red";
+
+// To get the className of the element
+element = document.querySelector("#header").className;
+// the last class gets the highest priority if there are two classes.
+
+// To get the classList of the element
+element = document.querySelector("#header").classList;
+// this returns the DOMtoken or the array while the className returns the string
+
+// to add the another class with the existing class
+element = document.querySelector("#header").classList.add("class-name");
+// we can add multiple classes just separated by the ","
+
+//vice-a-versa we can remove the classes the too
+element = document.querySelector("#header").classList.remove("class-name");
