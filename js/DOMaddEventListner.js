@@ -4,6 +4,7 @@
 
 // Assign the abc function to the onclick event of the header element
 document.getElementById("header").onclick = abc;
+
 document.getElementById("content").onmouseenter = abc2;
 
 function abc2() {
@@ -31,6 +32,7 @@ document.getElementById("content").addEventListener("mouseenter",abc3);
 
 function abc3() {
     document.getElementById("content").style.border = "5px solid midnightblue";
+    console.log("hello") //to check if the function is called or not
 }
 
 // document.getElementById("content").addEventListener("mouseleave", function() {
@@ -38,8 +40,8 @@ function abc3() {
 // });
 
 // More optimised way
-document.getElementById("content").addEventListener("mouseleave", function() {
-    this.getElementById("content").style.color = "pink";
+document.getElementById("sidebar").addEventListener("mouseenter", function() {
+    this.getElementById("sidebar").style.color = "pink";
 });
 
 //UseCapture:-
@@ -47,5 +49,3 @@ document.getElementById("content").addEventListener("mouseleave", function() {
 // when this is true the events of outer div runs first and then the inner event and vice-a-versa.
 
 //removeEventListener() Method:-
-
-
