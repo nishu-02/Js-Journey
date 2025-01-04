@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Form Events</title>
+</head>
+<body>
+	<form action="" onsubmit="submitFunction()">
+		<label for="">Name</label><input type="text" id="fname" onfocus="focusFunction(this)" onblur="blurFunction(this)" onchange="changeFunction(this)" onselect="selectFunction(this)"><br><br>
+
+		<label for="">Class</label><input type="email" id="" onfocus="focusFunction(this)"  oninput="inputfunction(this)" onblur="blurFunction(this)" oninvalid="console.log('Please fill the class')" required><br><br>
+		<!-- we can use the HTML inbuilt feature for it -->
+		<select id="" onfocus="focusFunction(this)" onblur="blurFunction(this)" >
+			<option value="India">India</option>
+			<option value="USA">USA</option>
+			<option value="Netherlands">Netherlands</option>
+			<option value="Sri Lanka">Sri Lanka</option>
+			<option value="Nepal">Nepal</option>
+		</select>
+		<input type="submit">
+		<br>
+	</form>
+
+	<div id="test" style="border:1px solid teal"></div>
+	<script>
+		function focusFunction(input) { // input can be anything
+			input.style.background= "teal";
+		}
+
+		function blurFunction(input) {
+			input.style.background = "";
+		}
+
+		function inputfunction(input) {
+			var x = input.value;
+			document.getElementById("test").innerHTML = x;
+		}
+
+		function changeFunction(change) {
+			var x = change.value;
+			document.getElementById("test").innerHTML = x;
+		}
+
+		function selectFunction(select) {
+			console.log("Select Event is called");
+		}
+
+		function submitFunction() {
+			var y = document.getElementById("fname").value;
+			alert("Hello " + y);
+			console.log("You Submitted a form");
+		}        
+	</script>
+</body>
+</html>
