@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>JavaScript</title>
+</head>
+<body>
+    <button onclick="openWindow()">Open Window</button>
+	<button onclick="closeWidnow()">Close Window</button>
+    <script > 
+        var myWindow;
+        function openWindow(){
+            var myWindow = window.open("https://chatgpt.com/", "_blank", "width = 500px, height = 300px, left = 100px, top = 200px"); //new tab
+            // window.open("https://chatgpt.com/", "_parent"); //same tab
+            // self and top are used in iframe
+        }
+
+        function closeWindow() {
+            myWindow.close();
+        }
+
+        function resizeFunction() {
+
+            console.clear();
+
+		    var iHeight = window.innerHeight;
+            console.log('Inner height'+ ' ' + iHeight);
+
+            var oHeight = window.outerHeight;
+            console.log('Outer Height'+ ' ' + oHeight);
+            
+            var iWidth = window.innerWidth;
+            console.log('Inner Width'+ ' ' + iWidth);
+
+            var oWidth = window.outerWidth;
+            console.log('Outer Width'+ ' ' + oWidth);
+        }
+
+        window.addEventListener('resize', resizeFunction);
+	</script>
+</body>
+</html>
+
+<!-- outerHeight = whole browser height excluding scrollbars and the url-->
+
+<!-- outerWidth = whole browser width excluding scrollbars and the url-->
+
+<!-- window.open(URL,name,specs)
+    all three parameters are optional (blank windows open then) 
+-->
