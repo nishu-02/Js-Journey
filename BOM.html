@@ -6,12 +6,34 @@
 <body>
     <button onclick="openWindow()">Open Window</button>
 	<button onclick="closeWidnow()">Close Window</button>
+    <button onclick="moveWindow()">Move Window To</button>
+    <button onclick="moveWindow2()">Move window By</button>
+    <button onclick="resizeWindow()">Resize Window To</button>
+    <button onclick="resizeWindow2()">Resize Window By</button>
+
     <script > 
         var myWindow;
+        var myWindow2;
+
         function openWindow(){
-            var myWindow = window.open("https://chatgpt.com/", "_blank", "width = 500px, height = 300px, left = 100px, top = 200px"); //new tab
+            // myWindow = window.open("https://chatgpt.com/", "_blank", "width = 500px, height = 300px, left = 100px, top = 200px"); //new tab
+            
+            myWindow2 = window.open("","","height = 250px, width = 250px, left = 70px, top= 56px");
+            myWindow2.document.write("<h1>My window <h1>");
             // window.open("https://chatgpt.com/", "_parent"); //same tab
             // self and top are used in iframe
+        }
+
+        function moveWindow() {
+            myWindow2.moveTo(100,100); // works for the absoulte position
+            myWindow2.focus();
+            // u cant move cross origin windows
+        }
+
+        function moveWindow2() {
+            myWindow2.moveBy(100,100);
+            myWindow2.focus();
+            // u cant move cross origin windows
         }
 
         function closeWindow() {
@@ -35,6 +57,16 @@
             console.log('Outer Width'+ ' ' + oWidth);
         }
 
+        function resizeWindow() {
+            myWindow2.resizeTo(400,560);
+        }
+        
+        function resizeWindow2() {
+            myWindow2.resizeBy(10,50);
+        }
+
+
+
         window.addEventListener('resize', resizeFunction);
 	</script>
 </body>
@@ -44,6 +76,4 @@
 
 <!-- outerWidth = whole browser width excluding scrollbars and the url-->
 
-<!-- window.open(URL,name,specs)
-    all three parameters are optional (blank windows open then) 
--->
+<!-- window.open(URL,name,specs) all three parameters are optional (blank windows open then) -->
