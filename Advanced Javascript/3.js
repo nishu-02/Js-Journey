@@ -1,4 +1,4 @@
-// Template strings
+// -------------- Template strings ---------------- //
 
 let user = "Nishant Garg";
 let data = "CSE";
@@ -58,3 +58,11 @@ function sum(name, ...args){
 }
 
 console.log(sum("Nishant", 10, 20, 30, 40, 50)); // 150
+
+// -------------- SPREAD operator ---------------- //
+
+// ... is the SPREAD operator and it is used to spread the elements of an array or object.
+
+let arr = [1, 2, 3, 4, 5];
+console.log(...arr); // 1 2 3 4 5
+console.log([...arr, 6, 7, 8]); // [1, 2, 3, 4, 5, 6, 7, 8] It goes being to an array bascially an copy of the first.
