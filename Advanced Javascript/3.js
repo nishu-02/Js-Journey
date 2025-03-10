@@ -66,3 +66,74 @@ console.log(sum("Nishant", 10, 20, 30, 40, 50)); // 150
 let arr = [1, 2, 3, 4, 5];
 console.log(...arr); // 1 2 3 4 5
 console.log([...arr, 6, 7, 8]); // [1, 2, 3, 4, 5, 6, 7, 8] It goes being to an array bascially an copy of the first.
+
+function multiply(name, ...arr) {
+    let total = 1;
+    for (let i in arr) {
+        total *= arr[i];
+    }
+    return `${name} ${total}`;
+}
+
+console.log(multiply("Nishant", ...arr)); // Nishant 120
+var arr2 = [...arr]; // It will create a copy of the array not the reference.
+var arr3 = arr; // It will create a reference to the array.
+var arr4 = [60, 70, 80, ...arr];
+console.log(arr4);
+
+// -------------- Object Literals ---------------- //
+
+let name = "Nishant";
+let age = 20;
+
+let who = {
+    name: name,
+    age: age
+};
+
+console.log(who);
+
+// In ES6, we can remove the key if the key and value are same.
+var who2 ={
+    name,
+    age
+};
+
+let n = "name";
+
+var who3 = {
+    [n]: "Nishant",
+    age: 20
+};
+console.log(who3); // We can also do the arithmetic operations in this [n + "first"] and we can also access the object content like obj.name even it was n
+
+// short form to create the functions inside the object.
+
+var who4 = {
+    [n + "first"] : "Nishant",
+    age: 20,
+    detail() {
+        return `Name:${this.namefirst} and of Age:$ {this.age}`
+    }
+}
+console.log(who4.detail());
+// also the fucntion can return the object itself.
+
+// -------------- Destructuring ---------------- // 
+
+let details = ["Arthur Morgan", "Red Dead Redemption 2", "Rockstar Games"];
+// rather than accessing the array using the index, we can use the destructuring to access the elements.
+
+// so we will crate and empty array and assign the values to the array.
+let [name2, game, company] = details;
+console.log(name2, game, company);
+
+// we can also skip the elements by using the comma.
+let [name3, , company2] = details;
+console.log(name3, company2); 
+
+let [origin, ...args] = details;
+console.log(origin, args); // Arthur Morgan [ 'Red Dead Redemption 2', 'Rockstar Games' ]
+
+// we can also use the destructuring in the objects. 
+
